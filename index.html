@@ -46,6 +46,19 @@
                 <td>{{book.title}}</td>
                 <td>{{book.price}}</td>
         </table>
+        <h2>Event handling</h2>
+        Noget tekst <span style="background-color: red;" v-on:mouseover="updateCounter">Hotspot</span> med tekst {{counter}}
+
+        <h2>input handling</h2>
+        <input type="text" v-model="name.lazy">
+        {{name}}
+        At work <input type="checkbox" v-model="atWork">
+        <div v-if="atWork">
+            <h2>At work</h2>
+            <input type="text" v-model="workplace">
+            <input type="number" v-model.number="salary">
+        </div>
+        <div v-else>Not at work</div>
 
     </div>
     <script src="index.js"></script>   

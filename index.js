@@ -4,6 +4,7 @@ Vue.createApp({
             name: "Jais",
             age: 40,
             atWork: true,
+            counter: 0,
             book: {
                 title: "MyBook",
                 price: 9.85,
@@ -20,8 +21,11 @@ Vue.createApp({
         }
     },
     methods: {
-        save(word) {
-           
+        updateCounter() {
+           this.counter++
+        },
+        updateCounter2(c){
+            return c+1
         }
     }
 }).mount("#app")
